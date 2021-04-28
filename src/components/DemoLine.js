@@ -52,9 +52,10 @@ const DemoLine: React.FC = () => {
         data: data,
         xField: 'month',
         yField: 'value',
-        legend: false,
+        legend: { position: 'top-right',marker: {symbol: 'square', radius: 5},},
+        interactions: [{ type: 'pie-legend-active' }, { type: 'element-active' }],
         seriesField: 'key',
-
+        height:300,
         connectNulls:true
 
     };

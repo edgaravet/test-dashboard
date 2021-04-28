@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {Breadcrumb, DatePicker, Radio, Row,Col} from "antd";
 import DemoLine from "./DemoLine";
+import {GlobalOutlined,PlusCircleOutlined} from "@ant-design/icons";
 
 
 
@@ -12,7 +13,7 @@ const LeftChar = () => {
         setValue(e.target.value)
     }
     return(
-        <div>
+        <div className={'char_date'}>
             <Breadcrumb style={{ margin: '16px 0' }}>
                 <Breadcrumb.Item>Date</Breadcrumb.Item>
                 <Breadcrumb.Item>Time Range</Breadcrumb.Item>
@@ -20,7 +21,7 @@ const LeftChar = () => {
             </Breadcrumb>
             <Row>
                 <Col span={'12'}>
-                    <div>
+                    <div className={'date_range'}>
                         <RangePicker />
                     </div>
                 </Col>
@@ -37,7 +38,18 @@ const LeftChar = () => {
                 </Col>
             </Row>
 
-            <DemoLine/>
+            <div className={'char_content'}>
+               <div className={'char_title'}>
+                   <h4>The Growth Rate Of Deposit And Withdrawal Transactions</h4>
+                   <div className={'char_title_icons'}>
+                       <PlusCircleOutlined />
+                       <GlobalOutlined />
+                   </div>
+
+               </div>
+                <DemoLine/>
+            </div>
+
 
         </div>
     )

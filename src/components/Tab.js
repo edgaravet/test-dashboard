@@ -1,6 +1,6 @@
 import React from 'react'
 import {Col, Row, Tabs} from 'antd';
-import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
+import { FileOutlined, KeyOutlined ,GlobalOutlined,SettingOutlined} from '@ant-design/icons';
 import TotalCounts from "./TotalCoaunts";
 import LeftChar from "./LeftChar";
 import RightChar from "./RightChar";
@@ -15,29 +15,23 @@ const Tab = () => {
 
         <Tabs defaultActiveKey="1">
             <TabPane
-                tab={<span><AppleOutlined /> GENERAL</span>}
-                key="1"
-            >
+                tab={<span><FileOutlined /> GENERAL</span>} key="1">
                <TotalCounts/>
                 <Row>
-                    <Col span={'12'}>
+                    <Col md={24} xl={12}>
 
                         <LeftChar/>
                     </Col>
 
 
-                    <Col span={'12'}>
+                    <Col md={24} xl={12}>
                        <RightChar/>
                     </Col>
                 </Row>
             </TabPane>
 
             <TabPane
-                tab={
-                    <span>
-          <AndroidOutlined />
-          Currencies & Countries
-        </span>
+                tab={<span><GlobalOutlined />Currencies & Countries</span>
                 }
                 key="2"
             >
@@ -46,10 +40,7 @@ const Tab = () => {
 
             <TabPane
                 tab={
-                    <span>
-          <AndroidOutlined />
-          Settings key
-        </span>
+                    <span><KeyOutlined />Settings key</span>
                 }
                 key="3"
             >
@@ -57,16 +48,7 @@ const Tab = () => {
             </TabPane>
 
             <TabPane
-                tab={
-                    <span>
-          <AndroidOutlined />
-         CONFIGS
-        </span>
-                }
-                key="4"
-            >
-                CONFIGS
-            </TabPane>
+                tab={<span><SettingOutlined />CONFIGS</span>} key="4">CONFIGS</TabPane>
         </Tabs>
        </div>
     )
