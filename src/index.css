@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.ant-layout-content{
+    padding: 0 !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.ant-layout{
+    background: #F2F2F2 !important;
 }
+.ant-layout-header{
+    background: #fff !important;
+}
+.header_right_name span{
+  color: #0069B6;
+  font-size: 14px;
+ margin-left: 15px;
+}
+
+.header_right_user_info{
+
+    margin-left: 15px;
+}
+
+.ant-avatar .ant-avatar-circle .ant-avatar-icon{
+    margin: 5px;
+}
+.header_right_user_info span{
+    color: #4B4B4B;
+    font-size: 14px;
+}
+
+.header_right_user_info span:nth-child(3){
+   margin-left: 5px;
+}
+
+
+.header_right_exit span{
+    margin-left: 27px;
+}
+
+
+.top_bar_left_side{
+    background: #fff;
+    padding: 5px;
+}
+
+
+.top_bar_left_side{
+    width: 200px;
+    height: 150px;
+    display: flex;
+}
+
+.top_bar_left_side img{
+    width: 100px;
+    margin: 0 auto;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.top_bar_right_side{
+    background: #fff;
+    padding: 17px 25px;
+}
+
+.top_bar_right_side h2{
+    color: #862165;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+.info_process{
+    background: #F2F2F2;
+    border-radius: 5px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+.info_process span{
+    color: #4B4B4B;
+    font-size: 14px;
+    position: relative;
+    font-weight: 500;
+
+
+}
+
+.info_creator{
+    background: none !important;
+}
+
+.info_process span:before{
+    content: "";
+    width: 2px;
+    height: 16px;
+    position: absolute;
+    right: -5px;
+    top: 2px;
+    background: #CCCCCC;
+}
+
+
+.info_process span:last-child:before{
+    display: none;
+}
+
+
+.body_content{
+    background: #fff;
+}
+
+.tabs_content{
+    margin-top: 20px;
+}
+
+.ant-tabs-top > .ant-tabs-nav, .ant-tabs-bottom > .ant-tabs-nav, .ant-tabs-top > div > .ant-tabs-nav, .ant-tabs-bottom > div > .ant-tabs-nav{
+    margin: 3px 2px 21px 17px !important;
+}
+
+
+.counts_content{
+    background: #FAF2FB;
+    padding: 5px;
+    margin: 0 12px;
+}
+
+.counts_content h5{
+    color: #666666;
+    font-size: 14px;
+}
+
+
+.counts_content span{
+    color: #4D4D4D;
+    font-size: 32px;
+}
+
+
+.counts_content.count2{
+    background: #E4F8FB;
+}
+
+.count3{
+    background: #FCF0E4;
+}
+
+
+.count4{
+    background: #E4EFF7;
+}
+
+.chars_radios{
+    text-align: end;
+    margin-right: 15px;
+}
+
