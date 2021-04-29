@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Layout, Menu} from "antd";
-import {AppleOutlined,AppstoreOutlined,TransactionOutlined,MenuUnfoldOutlined,MenuFoldOutlined} from "@ant-design/icons";
+import {MenuUnfoldOutlined,MenuFoldOutlined} from "@ant-design/icons";
 
 const { Sider } = Layout;
 const LeftNavbar = () => {
@@ -19,12 +19,12 @@ const LeftNavbar = () => {
                 style={{ height: '100%', borderRight: 0 }}
             >
 
-                <Menu.Item key="1" icon={<AppstoreOutlined />}>Dashboard</Menu.Item>
-                <Menu.Item key="2" icon={<AppleOutlined />}>Merchants</Menu.Item>
-                <Menu.Item key="3" icon={<AppleOutlined />}>Payment System</Menu.Item>
-                <Menu.Item key="4" icon={<TransactionOutlined />}>Transactions</Menu.Item>
-                <Menu.Item key="5" icon={<AppleOutlined />}>User Management</Menu.Item>
-                <Menu.Item key="6" icon={<AppleOutlined />}>Activity Logs</Menu.Item>
+                <Menu.Item key="1"><img src={require('../assets/img/dashboard.svg').default} alt={'dashboard'}/>Dashboard</Menu.Item>
+                <Menu.Item key="2"><img src={require('../assets/img/share.svg').default} alt={'merchants'}/>Merchants</Menu.Item>
+                <Menu.Item key="3"><img src={require('../assets/img/credit-card (1).svg').default} alt={'payment'}/>Payment System</Menu.Item>
+                <Menu.Item key="4"><img src={require('../assets/img/money_transfer.svg').default} alt={'transactions'}/>Transactions</Menu.Item>
+                <Menu.Item key="5"><img src={require('../assets/img/User_management24x24.svg').default} alt={'management'}/>User Management</Menu.Item>
+                <Menu.Item key="6"><img src={require('../assets/img/shield.svg').default} alt={'activity'}/>Activity Logs</Menu.Item>
 
 
                 <div className={'side_bar_collapse_icon'}>

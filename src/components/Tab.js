@@ -31,7 +31,7 @@ const Tab = () => {
             </TabPane>
 
             <TabPane
-                tab={<span><GlobalOutlined />Currencies & Countries</span>
+                tab={<span><GlobalOutlined /> CURRENCIES & COUNTRIES</span>
                 }
                 key="2"
             >
@@ -40,7 +40,7 @@ const Tab = () => {
 
             <TabPane
                 tab={
-                    <span><KeyOutlined />Settings key</span>
+                    <span><KeyOutlined />SETTINGS KEY</span>
                 }
                 key="3"
             >

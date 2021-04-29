@@ -1,26 +1,26 @@
 import React from 'react'
-import {Avatar, Col, Layout, Row, Space} from "antd";
-import {UserOutlined} from "@ant-design/icons";
-import {ExportOutlined} from "@ant-design/icons";
+import {Avatar, Col,Layout, Row, Space} from "antd";
+import {UserOutlined,ExportOutlined} from "@ant-design/icons";
 
-const { Header, Content, Sider } = Layout;
+const { Header } = Layout;
 const Navbar = () => {
     return(
         <Header className="header">
 
             <Row>
-                <Col xs={{span: 12}} xl = {{span:18}}>
+                <Col  span={8}>
 
 
 
                     <div className="logo">
-                        <img src={require('../assets/img/Logo.png').default}/>
+                        <img src={require('../assets/img/Logo.png').default} alt={'logo'}/>
                     </div>
                 </Col>
-                <Col xs={{span: 12}} xl = {{span:6}}>
-                    <Row>
 
-                        <Space>
+
+
+                <Col span={16} className={'navbar_right_side'}>
+                        <Space >
 
 
                             <div className={'header_right_name'}>
@@ -39,7 +39,7 @@ const Navbar = () => {
                                 <ExportOutlined />
                             </div>
                         </Space>
-                    </Row>
+
                 </Col>
             </Row>
 

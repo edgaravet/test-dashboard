@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Line } from '@ant-design/charts';
 
 const DemoLine: React.FC = () => {
     var data = [
         {
             month: 'March',
-            key: 'series1',
+            key: 'Deposit',
             value: 100,
         },
 
@@ -13,37 +13,55 @@ const DemoLine: React.FC = () => {
 
         {
             month: 'March',
-            key: 'series1',
+            key: 'Deposit',
             value: 350,
         },
 
         {
             month: 'April',
-            key: 'series1',
+            key: 'Deposit',
             value: 200,
         },
 
         {
             month: 'April',
-            key: 'series1',
+            key: 'Deposit',
             value: 400,
         },
 
 
         {
             month: 'April',
-            key: 'series1',
+            key: 'Deposit',
             value: 400,
         },
 
         {
             month: 'April',
-            key: 'series2',
+            key: 'Withdrawal',
             value: 150,
+        },
+
+        {
+            month: 'March',
+            key: 'Withdrawal',
+            value: 150,
+        },
+
+        {
+            month: 'April',
+            key: 'Withdrawal',
+            value: 150,
+        },
+
+        {
+            month: 'May',
+            key: 'Withdrawal',
+            value: 300,
         },
         {
             month: 'May',
-            key: 'series1',
+            key: 'Deposit',
             value: 132,
         },
 

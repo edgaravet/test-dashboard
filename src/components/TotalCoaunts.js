@@ -6,9 +6,9 @@ import {Row,Col} from 'antd';
 const TotalCounts = () => {
     return(
 
-        <Row>
+        <Row gutter={[16,16]}>
 
-            <Col span={6}>
+            <Col md={12} xxl={6} >
 
                     <div className={'counts_content'}>
                         <Row>
@@ -26,13 +26,12 @@ const TotalCounts = () => {
 
             </Col>
 
-            <Col span={6}>
+            <Col md={12} xxl={6} >
 
                 <div className={'counts_content count2'}>
                     <Row>
                         <Col span={'12'}>
-                            <h5>Sites the payment
-                                system is added to</h5>
+                            <h5>Sites the payment system is added to</h5>
                         </Col>
 
                         <Col span={'12'}>
@@ -43,7 +42,7 @@ const TotalCounts = () => {
             </Col>
 
 
-            <Col span={6}>
+            <Col md={12} xxl={6}>
 
                 <div className={'counts_content count3'}>
                     <Row>
@@ -59,7 +58,7 @@ const TotalCounts = () => {
             </Col>
 
 
-            <Col span={6}>
+            <Col md={12} xxl={6}>
 
                 <div className={'counts_content count4'}>
                     <Row>

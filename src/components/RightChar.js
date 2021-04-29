@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import {Breadcrumb, Col, DatePicker, Radio, Row} from "antd";
 import DemoPie from "./DemoPie";
 import {GlobalOutlined, PlusCircleOutlined} from "@ant-design/icons";
-import DemoLine from "./DemoLine";
 
 const { RangePicker } = DatePicker;
 const RightChar = () => {

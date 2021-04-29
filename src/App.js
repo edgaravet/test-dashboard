@@ -1,16 +1,15 @@
 import React from "react";
 import './App.css';
 import 'antd/dist/antd.css';
-import {Layout, Menu, Breadcrumb} from 'antd';
+import {Layout, Breadcrumb} from 'antd';
 import TopBar from "./components/TopBar";
 import Tabs from './components/Tab';
-import { AppleOutlined } from '@ant-design/icons';
 import Navbar from "./components/Navbar";
 import LeftNavbar from "./components/LeftNavbar";
 
 
 
-const { Header, Content, Sider } = Layout;
+const {Content} = Layout;
 
 
 
