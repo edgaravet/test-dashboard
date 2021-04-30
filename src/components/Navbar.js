@@ -1,14 +1,31 @@
 import React from 'react'
-import {Avatar, Col,Layout, Row, Space} from "antd";
-import {UserOutlined,ExportOutlined} from "@ant-design/icons";
+import { Col,Layout, Row, Space,Menu, Dropdown, Button} from "antd";
+import {ExportOutlined} from "@ant-design/icons";
 
 const { Header } = Layout;
+
+const menu = (
+    <Menu>
+        <Menu.Item>
+            <div className={'header_right_exit'}>
+                <div>
+                    <span>Admin</span>
+                </div>
+                <ExportOutlined />
+            </div>
+        </Menu.Item>
+    </Menu>
+);
+
 const Navbar = () => {
+
+
     return(
+
         <Header className="header">
 
             <Row>
-                <Col  span={8}>
+                <Col xs = {12} md = {12}  xxl={8} >
 
 
 
@@ -19,7 +36,10 @@ const Navbar = () => {
 
 
 
-                <Col span={16} className={'navbar_right_side'}>
+                <Col xs = {12} md = {12}  xxl={16}  className={'navbar_right_side'}>
+                    <Dropdown overlay={menu} placement="bottomLeft" arrow >
+                        <Button className={'mobile_dropdown'}><img src={require('../assets/img/Path 41706.png').default} alt={'avatar'}/><span>Name Surname</span></Button>
+                    </Dropdown>
                         <Space >
 
 
@@ -27,12 +47,12 @@ const Navbar = () => {
                                 <span>Platform</span>
                             </div>
                             <div className={'header_right_user_info'}>
-                                <Avatar icon={<UserOutlined />} />
+                                <img src={require('../assets/img/Path 41706.png').default} alt={'avatar'}/>
                                 <span>Name</span>
                                 <span>Surname</span>
                             </div>
 
-                            <div className={'header_right_exit'}>
+                            <div className={'header_right_exit mobile_exit'}>
                                 <div>
                                     <span>Admin</span>
                                 </div>
@@ -42,6 +62,8 @@ const Navbar = () => {
 
                 </Col>
             </Row>
+
+
 
         </Header>
 

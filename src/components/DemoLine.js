@@ -9,8 +9,6 @@ const DemoLine: React.FC = () => {
             value: 100,
         },
 
-
-
         {
             month: 'March',
             key: 'Deposit',

@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import {Breadcrumb, Col, DatePicker, Radio, Row} from "antd";
 import DemoPie from "./DemoPie";
-import {GlobalOutlined, PlusCircleOutlined} from "@ant-design/icons";
 
 const { RangePicker } = DatePicker;
 const RightChar = () => {
@@ -18,13 +17,13 @@ const RightChar = () => {
             </Breadcrumb>
 
             <Row>
-                <Col span={'12'}>
+                <Col xs={24} xl={12}>
                     <div className={'date_range'}>
                         <RangePicker />
                     </div>
                 </Col>
 
-                <Col span={'12'}>
+                <Col xs={24} xl={12}>
                     <div className={'chars_radios'}>
                         <Radio.Group  onChange={handleChange} value={value}  >
 
@@ -42,8 +41,8 @@ const RightChar = () => {
                 <div className={'char_title'}>
                     <h4>Transactions Statuses Of Deposit And Withdrawal</h4>
                     <div className={'char_title_icons'}>
-                        <PlusCircleOutlined />
-                        <GlobalOutlined />
+                        <i className="fal fa-plus-circle curs_pointer" />
+                        <i className="fas fa-share-square"/>
                     </div>
 
                 </div>

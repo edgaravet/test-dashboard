@@ -1,34 +1,25 @@
 import React,{useState} from 'react'
-import {Breadcrumb, DatePicker, Radio,Modal, Row,Col,Select,Form,Input,Checkbox,Button} from "antd";
+import {Breadcrumb, DatePicker, Radio, Row,Col} from "antd";
 import DemoLine from "./DemoLine";
-import {GlobalOutlined,PlusCircleOutlined} from "@ant-design/icons";
+import EditModal from "./EditModal";
+import {connect} from "react-redux";
+import {showModal} from "../redux/actions";
 
 
 
 const { RangePicker } = DatePicker;
-const { Option } = Select;
-const { TextArea } = Input;
-const LeftChar = () => {
+
+const LeftChar = (props) => {
     const [value,setValue] = useState(1);
 
-    const [isModalVisible, setIsModalVisible] = useState(false);
-
-    const showModal = () => {
-        setIsModalVisible(true);
-    };
-
-    const handleOk = () => {
-        setIsModalVisible(false);
-    };
-
-    const handleCancel = () => {
-        setIsModalVisible(false);
-    };
-    const  handleChange = (e) =>  {
+   const  handleChange = (e) =>  {
         setValue(e.target.value)
     }
 
 
+    const handleOpenModal = () => {
+    props.dispatch(showModal())
+    }
 
     return(
         <div className={'char_date'}>
@@ -38,13 +29,13 @@ const LeftChar = () => {
 
             </Breadcrumb>
             <Row>
-                <Col span={'12'}>
+                <Col  xs={24} xl={12}>
                     <div className={'date_range'}>
                         <RangePicker />
                     </div>
                 </Col>
 
-                <Col span={'12'}>
+                <Col xs={24} xl={12}>
                     <div className={'chars_radios'}>
                         <Radio.Group  onChange={handleChange} value={value}  >
 
@@ -60,74 +51,18 @@ const LeftChar = () => {
                <div className={'char_title'}>
                    <h4>The Growth Rate Of Deposit And Withdrawal Transactions</h4>
                    <div className={'char_title_icons'}>
-                       <PlusCircleOutlined onClick = {showModal} />
-                       <GlobalOutlined />
+                       <i className="fal fa-plus-circle curs_pointer" onClick = {handleOpenModal} />
+                       <i className="fas fa-share-square"/>
                    </div>
 
                </div>
                 <DemoLine />
             </div>
 
-            <Modal centered width={400} className={'edit_modal'}  title="Edit" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-
-                <Form layout="vertical">
-
-
-                    <Form.Item label="Processing Type">
-                        <Select
-
-
-                            placeholder="select"
-                            optionFilterProp="children"
-                            filterOption={(input, option) =>
-                                option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                            }
-                            filterSort={(optionA, optionB) =>
-                                optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
-                            }
-                        >
-                            <Option value="1">Not Identified</Option>
-                            <Option value="2">Closed</Option>
-                            <Option value="3">Communicated</Option>
-                            <Option value="4">Identified</Option>
-                            <Option value="5">Resolved</Option>
-                            <Option value="6">Cancelled</Option>
-                        </Select>
-                    </Form.Item>
-                    <Form.Item name="radio-group" label="Method Type">
-                        <Radio.Group>
-                            <Checkbox value="D" checked={true}>Deposit</Checkbox>
-                            <Checkbox value="A">Withdrawal</Checkbox>
-
-                        </Radio.Group>
-                    </Form.Item>
-
-
-                    <Form.Item label={'Description'}>
-                        <TextArea rows={4} />
-                    </Form.Item>
-
-                   <Form.Item className={'modal_buttons'}>
-
-                       <Button htmlType="button" onClick={handleCancel} >
-                          Cancel
-                       </Button>
-
-
-                       <Button type="primary" onClick={handleOk}>
-                           Save
-                       </Button>
-
-                   </Form.Item>
-
-                </Form>
-
-
-            </Modal>
+           <EditModal/>
 
         </div>
     )
 }
 
-
-export default LeftChar;
+export default connect(null,null)(LeftChar)

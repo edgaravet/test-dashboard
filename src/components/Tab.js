@@ -15,11 +15,10 @@ const Tab = () => {
 
         <Tabs defaultActiveKey="1">
             <TabPane
-                tab={<span><FileOutlined /> GENERAL</span>} key="1">
+                tab={<span ><FileOutlined /> GENERAL</span>} key="1">
                <TotalCounts/>
                 <Row>
                     <Col md={24} xl={12}>
-
                         <LeftChar/>
                     </Col>
 
@@ -31,7 +30,7 @@ const Tab = () => {
             </TabPane>
 
             <TabPane
-                tab={<span><GlobalOutlined /> CURRENCIES & COUNTRIES</span>
+                tab={<span className={'test'}><GlobalOutlined /> CURRENCIES & COUNTRIES</span>
                 }
                 key="2"
             >

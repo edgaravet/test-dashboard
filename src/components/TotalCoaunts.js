@@ -8,7 +8,7 @@ const TotalCounts = () => {
 
         <Row gutter={[16,16]}>
 
-            <Col md={12} xxl={6} >
+            <Col md={12} xxl={6} xs = {24} >
 
                     <div className={'counts_content'}>
                         <Row>
@@ -26,7 +26,7 @@ const TotalCounts = () => {
 
             </Col>
 
-            <Col md={12} xxl={6} >
+            <Col md={12} xxl={6} xs = {24} >
 
                 <div className={'counts_content count2'}>
                     <Row>
@@ -42,7 +42,7 @@ const TotalCounts = () => {
             </Col>
 
 
-            <Col md={12} xxl={6}>
+            <Col md={12} xxl={6} xs = {24}>
 
                 <div className={'counts_content count3'}>
                     <Row>
@@ -58,7 +58,7 @@ const TotalCounts = () => {
             </Col>
 
 
-            <Col md={12} xxl={6}>
+            <Col md={12} xxl={6} xs = {24}>
 
                 <div className={'counts_content count4'}>
                     <Row>

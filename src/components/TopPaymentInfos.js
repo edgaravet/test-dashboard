@@ -1,28 +1,27 @@
 import React from "react";
-import {ContactsOutlined, WifiOutlined} from "@ant-design/icons";
 
 
 const data = [
     {
-        info: <div><ContactsOutlined/>ID:<span> 254896</span></div>,
+        info: <div><i className="fal fa-id-badge"></i>ID:<span> 254896</span></div>,
     },
     {
-        info: <div><WifiOutlined/>System Type:<span> Online</span></div>
+        info: <div><i className="fas fa-wifi"></i>System Type:<span> Online</span></div>
     },
     {
-        info: <div><WifiOutlined/>Market:<span> Asia</span></div>,
+        info: <div><i className="fas fa-file-signature"></i>Market:<span> Asia</span></div>,
     },
     {
-        info: <div><WifiOutlined/> Created Date: <span> 14.07.2012</span></div>,
+        info: <div><i className="far fa-calendar-alt"></i> Created Date: <span> 14.07.2012</span></div>,
     },
     {
-        info: <div><WifiOutlined/>Created By: <span>John Smith</span></div>
+        info: <div><i className="fas fa-user"></i>Created By: <span>John Smith</span></div>
     },
     {
-        info: <div><WifiOutlined/>Last Updated:<span>14.07.2012</span></div>
+        info: <div><i className="far fa-calendar-alt"/>Last Updated:<span>14.07.2012</span></div>
     },
     {
-        info: <div><WifiOutlined/>Updated By:<span>John Smith</span></div>
+        info: <div><i className="fas fa-user"></i>Updated By:<span>John Smith</span></div>
     }
 
 ]
