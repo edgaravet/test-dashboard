@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {Breadcrumb, Col, DatePicker, Radio, Row} from "antd";
+import {Breadcrumb, Button, Col, DatePicker, Radio, Row, Tooltip} from "antd";
 import DemoPie from "./DemoPie";
 
 const { RangePicker } = DatePicker;
@@ -41,8 +41,13 @@ const RightChar = () => {
                 <div className={'char_title'}>
                     <h4>Transactions Statuses Of Deposit And Withdrawal</h4>
                     <div className={'char_title_icons'}>
-                        <i className="fal fa-plus-circle curs_pointer" />
-                        <i className="fas fa-share-square"/>
+                        <Tooltip overlayInnerStyle={{borderRadius:7}} placement="top" title={'Compare'} className={'process_tooltip'}>
+                            <Button><i className="fal fa-plus-circle curs_pointer"  /></Button>
+                        </Tooltip>
+
+                        <Tooltip overlayInnerStyle={{borderRadius:7}} placement="top" title={'Export'} className={'process_tooltip'}>
+                            <Button><i className="fas fa-share-square"/></Button>
+                        </Tooltip>
                     </div>
 
                 </div>

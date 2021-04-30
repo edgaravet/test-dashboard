@@ -33,6 +33,15 @@ const DemoPie: React.FC = () => {
         },
         color:['#D987DE','#7C61C5','#7FD0D7'],
         interactions: [{ type: 'element-selected' }, { type: 'element-active' }],
+        state: {
+            active: {
+                style: {
+                    lineWidth: 0,
+                    fillOpacity: 0.7,
+
+                },
+            },
+        }
     };
     return <Pie {...config} />;
 };

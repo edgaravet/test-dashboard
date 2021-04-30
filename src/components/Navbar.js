@@ -11,7 +11,7 @@ const menu = (
                 <div>
                     <span>Admin</span>
                 </div>
-                <ExportOutlined />
+                <img src={require('../assets/img/icon_pay_logout.png').default}/>
             </div>
         </Menu.Item>
     </Menu>
@@ -56,7 +56,7 @@ const Navbar = () => {
                                 <div>
                                     <span>Admin</span>
                                 </div>
-                                <ExportOutlined />
+                                <img src={require('../assets/img/icon_pay_logout.png').default}/>
                             </div>
                         </Space>
 

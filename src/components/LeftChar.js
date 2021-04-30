@@ -1,9 +1,10 @@
 import React,{useState} from 'react'
-import {Breadcrumb, DatePicker, Radio, Row,Col} from "antd";
+import {Breadcrumb, DatePicker, Radio, Tooltip, Button , Row,Col,} from "antd";
 import DemoLine from "./DemoLine";
 import EditModal from "./EditModal";
 import {connect} from "react-redux";
 import {showModal} from "../redux/actions";
+
 
 
 
@@ -51,8 +52,15 @@ const LeftChar = (props) => {
                <div className={'char_title'}>
                    <h4>The Growth Rate Of Deposit And Withdrawal Transactions</h4>
                    <div className={'char_title_icons'}>
-                       <i className="fal fa-plus-circle curs_pointer" onClick = {handleOpenModal} />
-                       <i className="fas fa-share-square"/>
+                       <Tooltip overlayInnerStyle={{borderRadius:7}} placement="top" title={'Compare'} className={'process_tooltip'}>
+                           <Button><i className="fal fa-plus-circle curs_pointer" onClick = {handleOpenModal} /></Button>
+                       </Tooltip>
+
+                       <Tooltip overlayInnerStyle={{borderRadius:7}} placement="top" title={'Export'} className={'process_tooltip'}>
+                           <Button><i className="fas fa-share-square"/></Button>
+                       </Tooltip>
+
+
                    </div>
 
                </div>

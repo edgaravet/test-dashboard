@@ -1,9 +1,18 @@
 import React from "react";
-import {Col, Space} from "antd";
+import {Button, Col, Space, Tooltip} from "antd";
 import {EditOutlined} from "@ant-design/icons";
+import {connect} from 'react-redux'
+import {showModal} from "../redux/actions";
 
 
-const TopProcessInfo = () => {
+const TopProcessInfo = (props) => {
+
+
+    const handleOpenEditModal = () => {
+        props.dispatch(showModal())
+    }
+
+    const title = <span className={'curs_pointer'} onClick={handleOpenEditModal}>Edit</span>
     return(
         <>
             <h2>Skrill</h2>
@@ -18,7 +27,10 @@ const TopProcessInfo = () => {
                         <span>Deposit / Withdrawal</span>
 
                         <span className={'first_info'}>Payment System Description Will Be Here...</span>
-                        <EditOutlined/>
+
+                        <Tooltip overlayInnerStyle={{paddingRight:10,paddingLeft:10,borderRadius:5}} placement="top" title={title} className={'process_tooltip'} >
+                            <Button ><EditOutlined/></Button>
+                        </Tooltip>
                     </div>
 
                 </Space>
@@ -29,4 +41,5 @@ const TopProcessInfo = () => {
     )
 }
 
-export default TopProcessInfo;
+
+export default connect(null,null)(TopProcessInfo)
