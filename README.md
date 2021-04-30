@@ -3,8 +3,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
+## Node Js must be the latest version to start
 In the project directory, you can run:
+
+### npm i
 
 ### `npm start`
 
