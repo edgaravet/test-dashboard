@@ -4,7 +4,7 @@ import DemoPie from "./DemoPie";
 
 const { RangePicker } = DatePicker;
 const RightChar = () => {
-    const [value,setValue] = useState(1);
+    const [value,setValue] = useState(2);
     const  handleChange = (e) =>  {
         setValue(e.target.value)
     }
@@ -28,7 +28,7 @@ const RightChar = () => {
                         <Radio.Group  onChange={handleChange} value={value}  >
 
                             <Radio.Button value={1}>24 hours</Radio.Button>
-                            <Radio.Button value={2}>30 days</Radio.Button>
+                            <Radio.Button value={2} checked={true}>30 days</Radio.Button>
                             <Radio.Button value={3}>2 months</Radio.Button>
                         </Radio.Group>
                     </div>

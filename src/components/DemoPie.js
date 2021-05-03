@@ -1,24 +1,31 @@
 import React from 'react';
 import { Pie } from '@ant-design/charts';
 
+
 const DemoPie: React.FC = () => {
+
+
+
     var data = [
         {
             type: 'Failed',
-            value: 60,
+            value: Math.floor(Math.random() * 50),
         },
         {
             type: 'Approved',
-            value: 15,
+            value: Math.floor(Math.random() * 10),
         },
 
         {
             type: 'Pending',
-            value: 25,
+            value: Math.floor(Math.random() * 10),
         },
 
 
     ];
+
+
+
     var config = {
         appendPadding: 10,
         data: data,
@@ -39,7 +46,9 @@ const DemoPie: React.FC = () => {
                     lineWidth: 0,
                     fillOpacity: 0.7,
 
+
                 },
+
             },
         }
     };

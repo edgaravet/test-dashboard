@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col,Layout, Row, Space,Menu, Dropdown, Button} from "antd";
-import {ExportOutlined} from "@ant-design/icons";
+
 
 const { Header } = Layout;
 
@@ -11,7 +11,7 @@ const menu = (
                 <div>
                     <span>Admin</span>
                 </div>
-                <img src={require('../assets/img/icon_pay_logout.png').default}/>
+                <img src={require('../assets/img/icon_pay_logout.png').default} alt={'pay_icon'}/>
             </div>
         </Menu.Item>
     </Menu>
@@ -56,7 +56,7 @@ const Navbar = () => {
                                 <div>
                                     <span>Admin</span>
                                 </div>
-                                <img src={require('../assets/img/icon_pay_logout.png').default}/>
+                                <img src={require('../assets/img/icon_pay_logout.png').default} alt={'pay_icon'}/>
                             </div>
                         </Space>
 

@@ -11,7 +11,7 @@ const TopBar = () => {
         <Layout>
 
 
-            <Row gutter={[16, 16]}>
+            <Row gutter={[16, 16]} >
                 <Col xs={24} lg = {12} xxl={3} className="gutter-row gutter-box">
                     <div className={'top_bar_left_side'}>
                         <img src={require('../assets/img/Path 48709.png').default} alt={'skrill'}/>

@@ -14,7 +14,12 @@ const LeftNavbar = () => {
 
 
     return(
-        <Sider theme={'light'} trigger={null} collapsible collapsed={collapsed}  width={200} className="site-layout-background custom_side">
+        <Sider theme={'light'} trigger={null} collapsible collapsed={collapsed}  width={200} className="site-layout-background custom_side" style={{
+            height: "100vh",
+            position: "sticky",
+            top: 0,
+            left: 0
+        }}>
 
             <Menu
                 mode="inline"

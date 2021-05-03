@@ -1,78 +1,33 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Line } from '@ant-design/charts';
+import {lineChartUrl} from "../config";
 
 const DemoLine: React.FC = () => {
-    var data = [
-        {
-            month: 'March',
-            key: 'Deposit',
-            value: 100,
-        },
-
-        {
-            month: 'March',
-            key: 'Deposit',
-            value: 350,
-        },
-
-        {
-            month: 'April',
-            key: 'Deposit',
-            value: 200,
-        },
-
-        {
-            month: 'April',
-            key: 'Deposit',
-            value: 400,
-        },
+    const [data,setData] = useState([]);
 
 
-        {
-            month: 'April',
-            key: 'Deposit',
-            value: 400,
-        },
+    useEffect(() => {
+        asyncFetch()
+    },[])
 
-        {
-            month: 'April',
-            key: 'Withdrawal',
-            value: 150,
-        },
-
-        {
-            month: 'March',
-            key: 'Withdrawal',
-            value: 150,
-        },
-
-        {
-            month: 'April',
-            key: 'Withdrawal',
-            value: 150,
-        },
-
-        {
-            month: 'May',
-            key: 'Withdrawal',
-            value: 300,
-        },
-        {
-            month: 'May',
-            key: 'Deposit',
-            value: 132,
-        },
-
-    ];
+    const asyncFetch = () => {
+        fetch(lineChartUrl)
+            .then((response) => response.json())
+            .then((json) => setData(json))
+            .catch((error) => {
+                console.log('fetch data failed', error);
+            });
+    };
     var config = {
         data: data,
-        xField: 'month',
-        yField: 'value',
-        legend: { position: 'top-right',marker: {symbol: 'square', radius: 5},},
-        interactions: [{ type: 'pie-legend-active' }, { type: 'element-active' }],
-        seriesField: 'key',
-        height:300,
-        connectNulls:true
+        padding: 'auto',
+        xField: 'Date',
+        yField: 'scales',
+        xAxis: { tickCount: 5 },
+        slider: {
+            start: 0.1,
+            end: 0.5,
+        },
 
     };
     return <Line {...config} />;

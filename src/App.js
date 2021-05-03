@@ -16,7 +16,7 @@ function App() {
             <Navbar/>
             <Layout>
                 <LeftNavbar/>
-                <Layout style={{padding: '0 24px 24px'}}>
+                <Layout style={{padding: '0 24px 0 24px'}}>
                     <Breadcrumb style={{margin: '16px 0'}} separator=">">
                         <Breadcrumb.Item>Home</Breadcrumb.Item>
                         <Breadcrumb.Item>Payment Sistem</Breadcrumb.Item>
