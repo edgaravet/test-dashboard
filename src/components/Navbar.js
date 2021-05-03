@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Col,Layout, Row, Space,Menu, Dropdown, Button} from "antd";
+import {connect, useDispatch} from "react-redux";
+import {getUserData, logOut} from "../redux/actions";
 
 
 const { Header } = Layout;
+
 
 const menu = (
     <Menu>
@@ -17,7 +20,14 @@ const menu = (
     </Menu>
 );
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+    const {user} = props;
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+       props.dispatch(getUserData())
+    },[])
 
 
     return(
@@ -47,16 +57,16 @@ const Navbar = () => {
                                 <span>Platform</span>
                             </div>
                             <div className={'header_right_user_info'}>
-                                <img src={require('../assets/img/Path 41706.png').default} alt={'avatar'}/>
-                                <span>Name</span>
-                                <span>Surname</span>
+                                <img src={user ? user.avatar : require('../assets/img/Path 41706.png').default} alt={'avatar'}/>
+                                <span>{user ? user.first_name : 'Name'}</span>
+                                <span>{user ? user.last_name : 'Surname'}</span>
                             </div>
 
                             <div className={'header_right_exit mobile_exit'}>
                                 <div>
-                                    <span>Admin</span>
+                                    <span>{user ? 'Team lead' : 'Admin'}</span>
                                 </div>
-                                <img src={require('../assets/img/icon_pay_logout.png').default} alt={'pay_icon'}/>
+                                <img className={'curs_pointer'} onClick={() => dispatch(logOut())} src={require('../assets/img/icon_pay_logout.png').default} alt={'pay_icon'}/>
                             </div>
                         </Space>
 
@@ -71,4 +81,11 @@ const Navbar = () => {
 }
 
 
-export default Navbar;
+function mapStateToProps(state){
+    return{
+        user:state.appReducer.user
+    }
+}
+
+
+export default connect(mapStateToProps,null)(Navbar);

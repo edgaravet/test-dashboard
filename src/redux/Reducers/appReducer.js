@@ -1,8 +1,9 @@
-import {HIDE_MODAL, SHOW_MODAL} from "../types";
+import {HIDE_MODAL, LOGOUT, SHOW_MODAL, UPDATE_USER_INFO} from "../types";
 
 
 const initialState = {
-    showModal:false
+    showModal:false,
+    user:''
 }
 
 export const appReducer = (state = initialState,action) => {
@@ -19,6 +20,21 @@ export const appReducer = (state = initialState,action) => {
             return {
                 ...state,
                 showModal:false
+            }
+        }
+
+        case UPDATE_USER_INFO:{
+            return {
+                ...state,
+                user:action.payload
+            }
+        }
+
+
+        case LOGOUT:{
+            return {
+                ...state,
+                user:''
             }
         }
 

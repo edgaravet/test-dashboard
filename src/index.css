@@ -72,6 +72,10 @@
 
 .header_right_user_info img {
     margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .custom_side {
@@ -99,15 +103,18 @@
 .header_right_user_info span {
     color: #4B4B4B;
     font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .header_right_user_info span:nth-child(3) {
     margin-left: 5px;
+
 }
 
 .header_right_exit div {
     display: inline-block;
-   position: relative;
+    position: relative;
     padding-right: 29px;
 }
 
@@ -119,6 +126,10 @@
 
 .header_right_exit span {
     margin-left: 27px;
+    color: #AFAFAF;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .header_right_exit span:nth-child(2) {
@@ -294,6 +305,7 @@
 
 .tabs_content {
     margin-top: 20px;
+    border: 1px solid #E6E6E6;
 }
 
 .ant-tabs-tab {
@@ -385,6 +397,11 @@
     margin: 15px;
     border: 1px solid #E6E6E6;
     border-radius: 5px;
+    box-shadow: 0 3px 6px #00000029;
+}
+
+.date_range .ant-picker-range{
+    border-radius: 4px;
 }
 
 .char_title {

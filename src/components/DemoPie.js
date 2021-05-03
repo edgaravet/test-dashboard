@@ -2,8 +2,8 @@ import React from 'react';
 import { Pie } from '@ant-design/charts';
 
 
-const DemoPie: React.FC = () => {
 
+const DemoPie: React.FC = () => {
 
 
     var data = [
