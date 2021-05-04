@@ -25,9 +25,11 @@ const Navbar = (props) => {
     const {user} = props;
     const dispatch = useDispatch();
 
+
+
     useEffect(() => {
-       props.dispatch(getUserData())
-    },[])
+       return  dispatch(getUserData())
+    }, [dispatch]);
 
 
     return(

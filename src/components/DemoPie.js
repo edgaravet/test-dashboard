@@ -45,12 +45,13 @@ const DemoPie: React.FC = () => {
                 style: {
                     lineWidth: 0,
                     fillOpacity: 0.7,
-
-
                 },
 
             },
-        }
+        },
+        style: {
+            padding:'0 15px 10px'
+        },
     };
     return <Pie {...config} />;
 };

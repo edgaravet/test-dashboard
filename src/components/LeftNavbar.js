@@ -78,7 +78,7 @@ const LeftNavbar = () => {
                 }>Activity Logs</Menu.Item>
 
 
-                <div className={'side_bar_collapse_icon'}>
+                <div style={!collapsed ? { width: '200px'} : {width: '80px'}} className={'side_bar_collapse_icon'}>
                     {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                         className: 'trigger',
                         onClick: toggle,

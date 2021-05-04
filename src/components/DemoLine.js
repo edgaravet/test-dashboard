@@ -24,9 +24,8 @@ const DemoLine: React.FC = () => {
         xField: 'Date',
         yField: 'scales',
         xAxis: { tickCount: 5 },
-        slider: {
-            start: 0.1,
-            end: 0.5,
+        style: {
+           padding:'0 15px 10px'
         },
 
     };

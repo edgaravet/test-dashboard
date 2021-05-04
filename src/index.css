@@ -423,7 +423,7 @@
 .char_title_icons {
     position: absolute;
     right: 10px;
-    top: 6px;
+    top: 0;
 }
 
 .char_title_icons i {
@@ -444,12 +444,13 @@
 
 .side_bar_collapse_icon {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    right: 0;
+    left: 0;
     text-align: end;
     background-color: #EFEFEF;
     padding: 14px;
+    transition: all 0.2s
 }
 
 .edit_modal .ant-modal-footer {
